@@ -34,3 +34,15 @@ footer {
     padding: 1rem;
 }
 
+#social-networks {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#social-networks i {
+    color: #2a2a2a;
+    font-size: 1.8rem;
+}
+
+
