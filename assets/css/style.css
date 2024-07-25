@@ -1,7 +1,12 @@
 /* IMPORT GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
-/* REMOVE DEFAULT BROWSER SPACINGS */
+/* REMOVE SCROLL BOUNCE EFFECT */
+:root {
+    overscroll-behavior: none;
+}
+
+/* REMOVE DEFAULT BROWSER SETTINGS */
 * {
     margin:0;
     padding: 0;
