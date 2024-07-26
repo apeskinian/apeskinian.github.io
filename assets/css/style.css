@@ -10,6 +10,7 @@
 * {
     margin:0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* GENERAL STYLES */
@@ -43,7 +44,34 @@ header a {
 #menu {
     list-style-type: none;
     text-align: right;
+    padding: 1rem;
+    background-color: #d8d8d8;
 }
+
+.menu-spacer {
+    display: none;
+}
+
+nav {
+    position: absolute;
+    width: fit-content;
+    right: 0;
+    display: none;
+    top: 100%;
+}
+
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle-label {
+    font-size: 2rem;
+}
+
 /* END HEADER */
 
 /* MAIN */
@@ -77,3 +105,6 @@ footer {
 }
 /* END FOOTER */
 
+@media screen and (min-width 768px) {
+   
+}
