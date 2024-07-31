@@ -194,14 +194,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #image-gallery img {
     width: 100%;
     line-height: 1em;
-    padding: 5px;
+    padding: 3px;
 }
 
 #image-gallery {
     line-height: 0;
-    padding: 5px;
+    padding: 3px;
 }
-
 
 /* animation for images */
 @media (prefers-reduced-motion: no-preference) {
@@ -216,7 +215,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       to {scale: 1; opacity: 1;}
   }
 }
-
 
 /* FOOTER */
 footer {
