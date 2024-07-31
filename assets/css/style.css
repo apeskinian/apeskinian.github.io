@@ -203,36 +203,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 /* animation for images */
-#image-gallery > img {
-    -webkit-animation: fade-in linear;
-    -moz-animation: fade-in linear;
-    -ms-animation: fade-in linear;
-    -o-animation: fade-in linear;
-    animation: fade-in linear;
-    animation-timeline: view();
-    animation-range-start: cover;
-    animation-range-end: 400px;
-}
+@media (prefers-reduced-motion: no-preference) {
+  #image-gallery > img {
+      scale: 0.7; opacity: 0;
+      animation: fade-in linear forwards;
+      animation-timeline: view();
+      animation-range: entry;
+  }
 
-@keyframes fade-in {
-    from {scale: 0.8; opacity: 0;}
-    to {scale: 1; opacity: 1;}
-}
-@-moz-keyframes fade-in {
-    from {scale: 0.8; opacity: 0;}
-    to {scale: 1; opacity: 1;}
-}
-  @-webkit-keyframes fade-in {
-    from {scale: 0.8; opacity: 0;}
-    to {scale: 1; opacity: 1;}
-} 
-  @-ms-keyframes fade-in {
-    from {scale: 0.8; opacity: 0;}
-    to {scale: 1; opacity: 1;}
-} 
-  @-o-keyframes fade-in {
-    from {scale: 0.8; opacity: 0;}
-    to {scale: 1; opacity: 1;}
+  @keyframes fade-in {
+      to {scale: 1; opacity: 1;}
+  }
 }
 
 /* FOOTER */
