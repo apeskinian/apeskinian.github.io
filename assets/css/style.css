@@ -203,7 +203,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 
-/* animation for images 
+/* animation for images */
 @media (prefers-reduced-motion: no-preference) {
   #image-gallery > img {
       scale: 0.7; opacity: 0;
@@ -216,7 +216,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       to {scale: 1; opacity: 1;}
   }
 }
-*/
+
 
 /* FOOTER */
 footer {

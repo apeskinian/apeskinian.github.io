@@ -1,0 +1,292 @@
+/* IMPORT GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* REMOVE SCROLL BOUNCE EFFECT */
+:root {
+    overscroll-behavior: none;
+}
+
+/* REMOVE DEFAULT BROWSER SETTINGS */
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL STYLES */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.hidden-heading {
+    display: none;
+}
+
+h1, h2 {
+    font-family: "Fjalla One", sans-serif;
+}
+/* END GENERAL STYLES */
+
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    font-family: "Fjalla One", sans-serif;
+    padding: 1rem;
+    background-color: #d3d3d3;
+    color: #2a2a2a;
+    box-shadow: 0 1px 1px rgba(42, 42, 42, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 98;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.current-page {
+    text-decoration: underline;
+}
+
+#menu {
+    list-style-type: none;
+    text-align: right;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0 1px 1px rgba(42, 42, 42, 0.5);
+    border-top: 1px solid rgba(42, 42, 42, 0.3);
+}
+
+ .menu-spacer {
+    color: #d3d3d3;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    display: none;
+    top: 100%;
+}
+
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle-label {
+    font-size: 2rem;
+}
+
+/* END HEADER */
+
+/* MAIN */
+main {
+    display: flex;
+    margin-top: 72px;
+    margin-bottom: 52px;
+    flex-grow: 1;
+}
+/* END MAIN */
+
+/* HOMEPAGE */
+#intro {
+    padding: 1rem;
+}
+
+/* BLINKING CURSOR CODE WILL REMOVED WHEN CONTENT IS MADE */
+/* Copyright (c) 2024 by Artem Gordinsky (https://codepen.io/ArtemGordinsky/pen/DgyQKy)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.blinking-cursor {
+    font-weight: 400;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-webkit-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-ms-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-o-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+/* BLINKING CURSOR CODE WILL REMOVED WHEN CONTENT IS MADE */
+
+/* DEV WORK */
+#bgfc {
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+    height: 400px;
+    width: 100%;
+    background: url(../images/devlinks/bgfc-hero.webp) no-repeat 10% 75% / cover;
+}
+
+#bgfc-title {
+    text-transform: uppercase;
+    color: #f5f5f5;
+    background-color: rgba(59, 77, 102, 0.8);
+    width: fit-content;
+    position: relative;
+    top: 40px;
+    padding: 0.5rem 0.5rem 0.5rem 20%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 3rem;
+}
+
+
+/* CREATIVE */
+#image-gallery img {
+    width: 100%;
+    line-height: 1em;
+    padding: 5px;
+}
+
+#image-gallery {
+    line-height: 0;
+    padding: 5px;
+}
+
+/* animation for images */
+@media (prefers-reduced-motion: no-preference) {
+  #image-gallery > img {
+      scale: 0.7; opacity: 0;
+      animation: fade-in linear forwards;
+      animation-timeline: view();
+      animation-range: entry;
+  }
+
+  @keyframes fade-in {
+      to {scale: 1; opacity: 1;}
+  }
+}
+
+/* FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0 -1px 1px rgba(42, 42, 42, 0.5);
+}
+
+#social-networks {
+    background-color: #d3d3d3;
+    padding: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#social-networks i {
+    color: #2a2a2a;
+    font-size: 30px;
+}
+/* END FOOTER */
+
+@media screen and (min-width: 576px) {
+    #image-gallery {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
+
+@media screen and (min-width: 768px){
+    nav {
+        display: block;
+        position: relative;
+        width: fit-content;
+    }
+
+    #menu {
+        background-color: #d3d3d3;
+        box-shadow: none;
+        border-top: none;
+        padding: 0 1rem 0 0;
+    }
+
+    #menu>li {
+        margin-left: 10px;
+    }
+
+    .menu-spacer {
+        color: #2a2a2a;
+    }
+
+    #nav-toggle-label {
+        display: none;
+    }
+    
+    header {
+        padding-right: 0;
+    }
+
+    #menu a:hover {
+        color: #ffffff;
+    }
+
+    #image-gallery {
+        column-count: 3;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #image-gallery {
+        column-count: 4;
+    }
+}
